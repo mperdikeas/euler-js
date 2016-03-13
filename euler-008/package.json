@@ -1,0 +1,11 @@
+{
+  "name": "euler-008",
+  "version": "1.0.0",
+  "description": "",
+  "main": "foo.js",
+  "scripts": {
+    "start": "node foo.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
