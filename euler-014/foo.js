@@ -17,10 +17,10 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 
 `);
 
-var _ = require('underscore');
+let _ = require('underscore');
 
 
-function collatz(n) {
+let collatz = function(n) {
     if (n===1)
         return [1];
     if (n%2 === 0)
@@ -31,9 +31,19 @@ function collatz(n) {
 
 console.log(collatz(13));
 
-N = 1000000;
+let N = 1000*1000;
 
-_.range(1, N).map(collatz);
+let allSequences = _.range(1, N);
+let rv = (function(){
+    return allSequences.reduce(function(currVal, currEl) {
+        let currLength = collatz(currEl).length;
+        if (currLength > currVal.len) {
+            return {i: currEl,
+                    len: currLength
+                   };
+        } else
+            return currVal;
+    }, {i: null, len: -1});
+})();
 
-work-in-progress
-   
+console.log(rv.i);
