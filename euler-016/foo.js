@@ -17,7 +17,6 @@ let rv = (function() {
                 return currV.mul(currEl);
             }, new Big(1));
     let digits = result.toFixed().split('');
-    console.log(digits);
     return digits.reduce(function(currV, currEl) {
         return currV+parseInt(currEl);
     }, 0);

@@ -1,0 +1,16 @@
+{
+  "name": "euler-019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node foo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.12.0",
+    "underscore": "^1.8.3"
+  }
+}
