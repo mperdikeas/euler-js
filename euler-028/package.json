@@ -1,0 +1,16 @@
+{
+  "name": "euler-028",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "underscore.string": "^3.3.4"
+  }
+}
