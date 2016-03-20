@@ -18,10 +18,6 @@ const TARGET = 200;
 
 let maximumRepetitions = _.max(coins.map( (x,_)=>TARGET/x )); 
 
-console.log(maximumRepetitions);
-
-
-
 function value(arr) {
     let sum = 0;
     arr.forEach(x=>{

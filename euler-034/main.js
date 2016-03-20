@@ -49,15 +49,33 @@ const MAX_DIGITS = (function() {
     }
 
     function maxF(n) {
-        return (power(10,2)-1).toFixed().split('').map( (x,_)=>parseInt(x)).map(factorial).reduce( (v,e)=>v+e, 0);
+        return (power(10,2)-1).toFixed().split('').map( (x,_)=>parseInt(x)).map(fact).reduce( (v,e)=>v+e, 0);
     }
 
     for (let i = 1; ; i++) {
         let minNV = minN(i);
         let maxFV = maxF(i);
-        I am left here
-
+        if (minNV > maxFV)
+            return i-1;
     }
-
-
+    throw new Error('impossible');
 })();
+
+console.log(`\n\n\n\nWe need to consider only numbers with up to ${MAX_DIGITS} digits`);
+
+function numOfDigits(n) {
+    return n.toFixed().length;
+}
+
+let curiousNumbers = (function() {
+    let rv = [];
+    for (let i = 0 ; i < power(10, MAX_DIGITS)-1; i++) {
+        if ((numOfDigits(i)>1) && (isCurious(i))) {
+            rv.push(i);
+        }
+    }
+    return rv;
+})();
+
+let sumOfCuriousNumbers = curiousNumbers.reduce( (v,e)=>v+e, 0);
+console.log(`The answer is: ${sumOfCuriousNumbers}`);
