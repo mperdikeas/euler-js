@@ -52,10 +52,10 @@ function process (dataS) {
     namesSorted.forEach( (x,i) => {
         let pos = i+1;
         let score = value(x)*pos;
-        const DEBUG = false;
+        const DEBUG = true;
         if (DEBUG)
             console.log(`Score for string "${x}" in position #${pos} is: ${score}`);
-        scoreForEachName.push(value(x)*i);
+        scoreForEachName.push(score);
     });
     return scoreForEachName.reduce( (v,e)=>v+e, 0);
 }
