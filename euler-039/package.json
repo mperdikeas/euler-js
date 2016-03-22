@@ -1,15 +1,12 @@
 {
-  "name": "euler-038",
+  "name": "euler-039",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "node main.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.6.1"
-  }
+  "license": "ISC"
 }
