@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+cat p042_words.txt  | tr ',' '\n' | tr -d "\"" 
